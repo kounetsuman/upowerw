@@ -1,17 +1,19 @@
 #!/bin/bash
-cd `dirname $0`
 # Identify the battery device
 DEVICES=`upower -e`
 for i in $DEVICES
 do
     if [[ `upower -i $i | grep -e state -e percentage` != "" ]]; then
-        echo DEVICE=$i > ./env.txt
+        DEVICE=$i
+        APPROOT=$(cd $(dirname $0); pwd)
     fi
 done
 
 # Generate an executable file
 cat <<EOF > ./upowerw
 #!/bin/bash
+DEVICE=$DEVICE
+APPROOT=$APPROOT
 . $(cd $(dirname $0); pwd)/src/main.sh
 EOF
 
