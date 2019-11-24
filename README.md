@@ -14,6 +14,8 @@ none
 
 ```
 # /usr/local/bin/ must have a pass
+git clone https://github.com/punkrou404/upowerw.git
+cd upowerw
 sh ./init.sh
 ```
 
