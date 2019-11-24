@@ -27,11 +27,14 @@ sh ./init.sh
 ```
 # Displays the remaining charge
 $ upowerw -p
-⚡084%
+84 # 84%
 
-# Is it currently charging
-$ upowerw -c
-true
+# Display one of the following
+# - discharging
+# - charging
+# - fully-charged
+$ upowerw -s
+charging
 
 ```
 
