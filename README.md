@@ -8,7 +8,10 @@ The following status will be returned.
 
 # Dependency
 
-none
+```
+UPower client version 0.99.11
+UPower daemon version 0.99.11
+```
 
 # Setup
 
